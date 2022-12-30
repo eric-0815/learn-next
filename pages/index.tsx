@@ -19,6 +19,12 @@ function Home() {
       <Link href='/product'>
         <p>Products</p>
       </Link>
+      <Link href='/users'>
+        <p>Users</p>
+      </Link>
+      <Link href='/posts'>
+        <p>Posts</p>
+      </Link>
       <button onClick={handleClick}>
         Place Order
       </button>
