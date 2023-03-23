@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import { getFilteredEvents } from '../../dummy-data';
 import EventList from '../../components/events/event-list';
 import ResultsTitle from '../../components/events/results-title';
@@ -38,6 +40,10 @@ export default function FilteredEventsPage(props) {
 
     return (
         <>
+            <Head>
+                <title>Filtered Events</title>
+                <meta name='description' content={`All events for ${month}/${year}.`} />
+            </Head>
             <ResultsTitle date={new Date(year, month - 1)} />
             <EventList items={events} />
         </>
