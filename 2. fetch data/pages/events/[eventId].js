@@ -12,12 +12,14 @@ function EventDetailPage(props) {
 
     // const eventId = router.query.eventId;
     const event = props.selectedEvent;
-    console.log(`event: ${event}`)
     if (!event) {
         return (
-            <ErrorAlert>
-                <p>No event found!</p>
-            </ErrorAlert>
+            // <ErrorAlert>
+            //     <p>No event found!</p>
+            // </ErrorAlert>
+            <div className='center'>
+                <p>Loading...</p>
+            </div>
         );
     }
 
@@ -45,8 +47,9 @@ export async function getStaticProps(context) {
     return {
         props: {
             selectedEvent: event
-        }
-    }
+        },
+        revalidate: 30
+    };
 }
 
 export async function getStaticPaths() {
