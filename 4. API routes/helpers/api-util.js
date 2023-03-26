@@ -1,4 +1,3 @@
-// https://nextjs-course-96773-default-rtdb.firebaseio.com/
 export async function getAllEvents() {
   const response = await fetch('https://nextjs-course-96773-default-rtdb.firebaseio.com/events.json');
   const data = await response.json();
@@ -9,10 +8,10 @@ export async function getAllEvents() {
     events.push({
       id: key,
       ...data[key]
-    })
+    });
   }
 
-  return events
+  return events;
 }
 
 export async function getFeaturedEvents() {
