@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import '@/styles/globals.css'
-import Layout from '../components/layout/layout';
 
-const App = ({ Component, pageProps }) => {
+import Layout from '../components/layout/layout';
+import '../styles/globals.css';
+
+function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
@@ -15,4 +16,4 @@ const App = ({ Component, pageProps }) => {
   );
 }
 
-export default App;
+export default MyApp;
